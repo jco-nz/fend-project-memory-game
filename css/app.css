@@ -1,0 +1,191 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background:  whitesmoke url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    font-family: 'Lato', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    flex-direction: row nowrap;
+}
+
+header {
+    background-color: rgb(75, 75, 226);
+    padding: 8px;
+}
+
+header h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    text-align: center;
+    letter-spacing: 25px;
+    text-shadow: 4px 3px 0px purple, 9px 8px 0px rgba(0,0,0,0.15);
+    margin-bottom: 15px;
+    margin-top: 10px;
+    color: white;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 660px;
+    min-height: 680px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    background: #02b3e4;
+    cursor: default;
+}
+
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: #02ccba;
+    font-size: 33px;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel, .timer-panel {
+    text-align: left;
+    margin: 10px;
+    flex: 1 1 40%;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #f3ecd3;
+    border-radius: 5px;
+    height: 110px;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 25px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: orange;
+    font-weight: 100;
+}
+
+.restart .fa-repeat {
+    font-style: italic;
+}
+
+.stars-excellent {
+    color: gold;
+}
+
+.stars-good {
+    color: purple;
+}
+
+.stars-average {
+    color: red;
+}
+
+.stars-hidden {
+    visibility: hidden;
+}
+
+
+.game-timer {
+    font-size: 2.2rem;
+    margin-top: 10px;
+    word-spacing: 5px;
+    margin-left: 30px;
+    font-family: Orbitron;
+}
+
+.main-section {
+    flex: 1 1 80%;
+    display: flex;
+    justify-content: center;
+    background-color: #fff0bc;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 0 10px;
+    padding-top: 50px;
+  
+}
+
+
+.section-header {
+    font-size: 1.2rem;
+    margin: 15px;
+    color: darkgrey;
+}
+
+.section-body {
+    margin: 10px 50px 10px;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    color: royalblue;
+}
+
+.moves {
+    margin-left: 50px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
